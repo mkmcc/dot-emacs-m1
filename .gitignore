@@ -3,3 +3,5 @@ eshell
 personal
 savefile
 transient
+
+*.el~
