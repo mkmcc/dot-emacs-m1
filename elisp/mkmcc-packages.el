@@ -10,7 +10,7 @@
 ;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (setq package-user-dir (expand-file-name "elpa" base-dir))
 (package-initialize)
@@ -40,6 +40,7 @@
     ido-vertical-mode
     ;;ido-ubiquitous
     smex
+    ;;solarized-theme
     ;; yasnippet
     dash
     s
@@ -61,7 +62,7 @@
     (message "%s" " done.")
     ;; install the missing packages
     (mapc #'package-install
-          (remove-if #'package-installed-p mkmcc-packages))))
+          (cl-remove-if #'package-installed-p mkmcc-packages))))
 
 (mkmcc-install-packages)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

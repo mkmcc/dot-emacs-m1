@@ -88,7 +88,7 @@
 (defvar athena-mode-font-lock-keywords
   `(
     ;; blocks
-    ("^\\(<\\)\\(\\sw+\\)\\(>\\)"
+    ("^\\(<\\)\\([[:punct:][:word:]]+\\)\\(>\\)" ; "^\\(<\\)\\(\\sw+\\)\\(>\\)"
      (2 'font-lock-type-face))
     ;; numbers
     (,(format "=\\s-*%s\\s-*"
